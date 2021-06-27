@@ -1,0 +1,50 @@
+/* pages/index/dymamic/text/text.wxss */
+scroll-view{
+    height: 200%;
+    padding-bottom: 20rpx;
+}
+/* 昵称和头像、发布时间总体样式 */
+.title{
+    width: 200%;
+    display: flex;
+    align-items: center;
+    margin-top: 20rpx;
+    margin-bottom: 20rpx;
+}
+/* 头像 */
+.avatar{
+    border-radius: 50%;
+    width: 80rpx;
+    height: 80rpx;
+    margin:20rpx 20rpx 20rpx 20rpx 20rpx;
+}
+/* 昵称 */
+.nickName{
+    font-size: 30rpx;
+    color: black;
+    text-indent: 10px;
+}
+.time{
+    font-size: 24rpx;
+    color: #d8d8d8;
+    text-indent: 10px;
+}
+/* 微博正文内容 */
+.content{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.content>text{
+    width: 96%;
+    font-size: 36rpx;
+    margin-bottom: 20rpx;
+}
+.content>image{
+    width: 100%;
+    margin-bottom: 10rpx;
+}
+.content>video{
+    width: 97%;
+}

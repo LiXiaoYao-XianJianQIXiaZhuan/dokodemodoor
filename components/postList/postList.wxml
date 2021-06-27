@@ -1,0 +1,45 @@
+<!-- 动态 -->
+<!-- 滑动动态 -->
+<scroll-view class="postList" scroll-y="{{true}}" enable-flex="{{true}}" enhanced="{{true}}" show-scrollbar="{{false}}">
+  <!-- 循环帖子数组 -->
+  <view class="postList-content" wx:for="{{postList}}" wx:key="item" bindtap="gotoPost" data-postid="{{item.postid}}" wx:for-index="postIndex">
+    <view class="postList-starTips" wx:if="{{item.star==='upvote'}}">明星点赞过</view>
+    <view class="postList-user" catchtap="gotoUser" data-userid="{{item.userid}}">
+      <image class="postList-user-avatar" src="{{item.avatar}}" />
+      <view class="postList-user-info">
+        <text class="postList-nickname">{{item.nickname}}</text>
+        <text class="postList-time">{{item.time}}</text>
+      </view>
+    </view>
+    <text class="postList-text {{item.showed==true? '':'unshowed'}}" id="s{{postIndex}}">{{item.text}}</text>
+    <!-- 查看全部功能实现 -->
+    <view class="postList-showAll" catchtap="showAll" data-showed="{{item.showed}}" data-index="{{postIndex}}" hidden="{{item.showBtn?false:true}}">
+      {{item.showed==true? '收起':'展开全文'}}
+    </view>
+    <!-- 图片视频 -->
+    <view class="postList-pImage{{item.imageUrl.length===1? '-only':''}}" wx:if="{{item.type===0}}">
+      <image class="postImage" catchtap="lookImage" wx:for="{{item.image}}" wx:key="item" src="{{item}}" data-index="{{index}}"  data-postindex="{{postIndex}}"/>
+    </view>
+    <video class="postList-pVideo" wx:if="{{item.type===1}}" id="postVideo" src="{{item.videoUrl}}" />
+    <!-- 底部按钮 -->
+    <view class="postList-button">
+      <view class="postList-share" catchtap="shareTap" data-index="{{postIndex}}">
+        <image class="functionImage" src="http://qszf7nxlq.hn-bkt.clouddn.com/images/post-unshared.png" />
+        <text class="functionTest">{{item.shareSum}}</text>
+      </view>
+      <view class="postList-comment" catchtap="commentTap" data-postid="{{item.postid}}">
+        <image class="functionImage" src="http://qszf7nxlq.hn-bkt.clouddn.com/images/post-comment.png" />
+        <text class="functionTest">{{item.commentSum}}</text>
+      </view>
+      <view class="postList-good{{gooded?'-clicked':''}}" catchtap="goodTap" data-index="{{postIndex}}">
+        <image class="functionImage" wx:if="{{item.good.gooded}}" src="http://qszf7nxlq.hn-bkt.clouddn.com/images/post-good.png" />
+        <image class="functionImage" wx:else src="http://qszf7nxlq.hn-bkt.clouddn.com/images/post-ungood.png" />
+        <text class="functionTest">{{item.good.goodSum}}</text>
+      </view>
+    </view>
+  </view>
+</scroll-view>
+<view class="postList-tapShareView" hidden="{{!bottomShareShow}}">
+  <button class="btn" bindtap="collect" type="default">收藏</button>
+  <button class="btn" id="btn" open-type="share" type="default" bindtap="share">分享</button>
+</view>

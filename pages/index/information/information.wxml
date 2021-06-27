@@ -1,0 +1,12 @@
+<scroll-view class="information" scroll-y="{{true}}" enable-flex="{{true}}">
+    <view class="information-content" wx:for="{{informationData.informationList}}" wx:key="item" bindtap="goToDetail" data-content="{{item.content}}" data-newsid="{{item.newsid}}">
+        <image class="information-content-image" src="{{item.imageUrl[0]}}" />
+        <view class="information-content-item">
+            <view class="information-content-item-title">{{item.title}}</view>
+            <view class="information-content-item-timeAndtype">
+                <view class="information-content-item-type">{{item.type ===0? '新闻':item.type===1? '专访':'视频'}}</view>
+                <text class="information-content-item-time">{{item.time}}</text>
+            </view>
+        </view>
+    </view>
+</scroll-view>

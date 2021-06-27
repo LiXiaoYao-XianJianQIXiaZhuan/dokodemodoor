@@ -1,0 +1,36 @@
+<view class="title">帖子</view>
+<text class="tips">我赞过的帖子{{postList.length}}</text>
+<view class="content" wx:for="{{postList}}" wx:key="item">
+    <view class="user">
+        <image class="user-avatar" src="{{item.avatar}}" />
+        <view class="user-info">
+            <text class="nickname">{{item.nickname}}</text>
+            <text class="time">{{item.time}}</text>
+        </view>
+    </view>
+    <text class="text-{{item.showed==true? 'showed':'unshowed'}}">{{item.content}}</text>
+    <!-- 查看全部功能实现 -->
+    <view class="showAll" bindtap="showAll" data-showed="{{item.showed}}" data-index="{{index}}">
+        {{item.showed==true? '收起':'展开全文'}}
+    </view>
+    <view class="pImage{{item.imageUrl.length===1? '-only':''}}" wx:if="{{item.cType==='image'}}">
+        <image wx:for="{{item.imageUrl}}" wx:key="item" src="{{item.image}}" />
+    </view>
+    <video class="pVideo" wx:if="{{item.cType==='video'}}" id="postVideo" src="{{item.videoUrl}}" />
+    <view class="button">
+        <button class="share{{shared?'-clicked':''}}" open-type="share" data-index="{{index}}" type="default">
+            <image wx:if="{{item.share.shared}}" src="http://qszf7nxlq.hn-bkt.clouddn.com/images/post-unshared.png" />
+            <image wx:else src="http://qszf7nxlq.hn-bkt.clouddn.com/images/post-unshared.png" />
+            <text>{{item.share.shareSum}}</text>
+        </button>
+        <view class="comment">
+            <image src="http://qszf7nxlq.hn-bkt.clouddn.com/images/post-comment.png" />
+            <text>{{item.comment.length}}</text>
+        </view>
+        <view class="good{{gooded?'-clicked':''}}">
+            <image wx:if="{{item.good.gooded}}" src="http://qszf7nxlq.hn-bkt.clouddn.com/images/post-good.png" />
+            <image wx:else src="http://qszf7nxlq.hn-bkt.clouddn.com/images/post-ungood.png" />
+            <text>{{item.good.goodSum}}</text>
+        </view>
+    </view>
+</view>

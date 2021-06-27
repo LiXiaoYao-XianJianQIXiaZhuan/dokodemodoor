@@ -1,0 +1,19 @@
+<!-- 顶部标签页标题 -->
+<view class="top-tab">
+    <view class="top-tab-item {{topTapIndex===0? 'checked':'unchecked'}}" bindtap="indexChangeContent" data-Item="0">动态</view>
+    <view class="top-tab-item {{topTapIndex===1? 'checked':'unchecked'}}" bindtap="indexChangeContent" data-Item="1">作品</view>
+    <view class="top-tab-item {{topTapIndex===2? 'checked':'unchecked'}}" bindtap="indexChangeContent" data-Item="2">资讯</view>
+</view>
+<view class="content">
+    <swiper current="{{indexContentIndex}}" bindchange="indexChangeTab">
+        <swiper-item>
+            <include src="/pages/index/dymamic/dymamic.wxml"></include>
+        </swiper-item>
+        <swiper-item>
+            <include src="/pages/index/works/works.wxml"></include>
+        </swiper-item>
+        <swiper-item>
+            <include src="/pages/index/information/information.wxml"></include>
+        </swiper-item>
+    </swiper>
+</view>

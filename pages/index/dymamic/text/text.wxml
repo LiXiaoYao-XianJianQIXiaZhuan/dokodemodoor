@@ -1,0 +1,14 @@
+<scroll-view >
+    <view class="title">
+        <image class="avatar" src="{{avatar}}" />
+        <view >
+            <view class="nickName">{{nickname}}</view>
+            <view class="time">{{time}}</view>
+        </view>
+    </view>
+    <view class="content">
+        <text >{{content}}</text>
+        <image wx:if="{{images[0]!==''}}" wx:for="{{images}}" wx:key="item" src="{{item}}" mode="widthFix" />
+        <video src="{{video}}" wx:if="{{video !== ''}}" />
+    </view>
+</scroll-view>

@@ -1,0 +1,12 @@
+<!-- 顶部标签 -->
+<view class="title">关注的人</view>
+<!-- 全部粉丝页面 -->
+<view class="focus">
+    <view class="focus-content" wx:for="{{focusList}}" wx:key="item">
+        <image class="focus-avatar" src="{{item.avatar}}" />
+        <view class="focus-message">
+            <text class="focus-nickname">{{item.nickname}}</text>
+        </view>
+        <view class="focus-follow" bindtap="addFollowed" data-userid="{{item.userid}}">{{item.followed===true? '已关注':'+关注'}}</view>
+    </view>
+</view>

@@ -1,0 +1,15 @@
+<textarea id="input" type="text" value="{{inputValue}}" placeholder="请输入您想要发表的评论" 
+        focus="{{true}}" adjust-position="{{true}}" confirm-type="完成"
+        bindinput="edit" bindblur="pauseEditing" bindconfirm="finishEditing" />
+<view class="button">
+    <!-- 选择图片按钮 -->
+    <image class="chooseImage" src="http://qszf7nxlq.hn-bkt.clouddn.com/images/post-chooseimage.png" bindtap="chooseImage" >
+        <view class="tips" wx:if="{{comment.image.length>0}}">{{comment.image.length}}</view>
+    </image>
+    <!-- 选择视频按钮 -->
+    <image class="choosevideo" src="http://qszf7nxlq.hn-bkt.clouddn.com/images/post-choosevideo.png" bindtap="chooseVideo">
+      <view class="tips" wx:if="{{comment.video!=null}}"></view>
+    </image>
+    <image class="emoji" src="http://qszf7nxlq.hn-bkt.clouddn.com/images/post-emoji.png" />
+</view>
+<button class="publish" bindtap="publish">发表</button>

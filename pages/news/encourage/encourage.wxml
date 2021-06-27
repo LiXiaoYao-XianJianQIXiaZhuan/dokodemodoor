@@ -1,0 +1,24 @@
+<view class="news-informationBar-title">收到点赞</view>
+<scroll-view class="news-informationBar-messageList" scroll-y="true" enable-flex="{{true}}">
+    <view class="news-informationBar-messageList-message" wx:if="{{buttonSelected==='encourage'}}" wx:for="{{Message.encourage}}" wx:key="item">
+        <view class="news-informationBar-messageList-message-type">{{item.type}}</view>
+        <view class="encourage-goods">
+            <image src="{{item.gAvatar}}" />
+            <view class="encourage-content">
+                <view class="encourage-text">
+                    <view> @<text wx:for="{{item.gUserList}}" wx:if="{{index<3}}" wx:key="item">{{item}}{{index==2?'':'、'}}</text>等人</view>赞了你的帖子
+                </view>
+                <view class="encourage-allGoods">
+                    <image src="http://qszf7nxlq.hn-bkt.clouddn.com/images/encourage-up.png" />
+                    <text>+{{item.gUserList.length}}</text>
+                </view>
+                <text class="encourage-time">{{item.time}}</text>
+            </view>
+        </view>
+        <!-- <view class="news-informationBar-messageList-message-content">{{item.user}}点赞了你</view> -->
+        <view class="news-informationBar-messageList-message-state">
+            查看说明
+            <image class="news-informationBar-messageList-message-row" src="http://qszf7nxlq.hn-bkt.clouddn.com/images/news-informationBar-messageList-message-row.png" />
+        </view>
+    </view>
+</scroll-view>

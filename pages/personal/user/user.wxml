@@ -1,0 +1,34 @@
+<scroll-view class="user">
+    <image class="user-cover" src="{{user.cover}}" />
+    <view class="user-info">
+        <image class="user-info-avatar" src="{{user.avatar}}" />
+        <view class="user-info-button">
+            <view class="user-info-button-item" wx:if="{{followed}}">
+                <image src="http://qszf7nxlq.hn-bkt.clouddn.com/images/followed.png" />
+                <text >已关注</text>
+            </view>
+            <view class="user-info-button-item" wx:else>
+                <image src="http://qszf7nxlq.hn-bkt.clouddn.com/images/follow.png" />
+                <text >关注</text>
+            </view>
+            <view class="user-info-button-item">
+                <image src="http://qszf7nxlq.hn-bkt.clouddn.com/images/letter.png" />
+                <text >私信</text>
+            </view>
+        </view>
+        <view class="user-info-nickName">{{user.nickName}}</view>
+        <view class="user-info-fans">粉丝：{{user.fans}}</view>
+    </view>
+    <view class="user-release">
+        <view class="user-release-title">Ta的发布</view>
+        <view class="user-release-item" wx:for="{{release}}" wx:key="item">
+            <image class="user-release-item-image" src="{{item.image}}"/>
+            <view class="user-release-item-tips">{{item.type}}</view>
+            <view class="user-release-item-content">
+                <view class="user-release-item-content-title">{{item.title}}</view>
+                <view class="user-release-item-content-quantitySold">已售：{{item.quantitySold}}</view>
+                <view class="user-release-item-content-price">￥ {{item.price}}</view>
+            </view>
+        </view>
+    </view>
+</scroll-view>

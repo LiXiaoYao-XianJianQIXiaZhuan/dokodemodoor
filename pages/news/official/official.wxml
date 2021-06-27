@@ -1,0 +1,14 @@
+<view class="news-informationBar-title" wx:if="{{buttonSelected==='official'}}">官方通知</view>
+<scroll-view class="news-informationBar-messageList" scroll-y="true">
+    <view class="news-informationBar-messageList-message" wx:if="{{buttonSelected==='official'}}" wx:for="{{Message.official}}" wx:key="item"  bindtap="goToOfficialTest" data-list="{{item}}">
+        <view class="news-informationBar-messageList-message-type">{{item.type}}</view>
+        <view class="official">
+            <image src="{{item.newsImage}}" />
+            <text >{{item.content}}</text>
+        </view>
+        <view class="news-informationBar-messageList-message-state">
+            查看说明
+            <image class="news-informationBar-messageList-message-row" src="http://qszf7nxlq.hn-bkt.clouddn.com/images/news-informationBar-messageList-message-row.png" />
+        </view>
+    </view>
+</scroll-view>

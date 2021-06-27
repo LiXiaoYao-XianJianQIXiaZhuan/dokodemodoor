@@ -1,0 +1,19 @@
+/* pages/news/official/official.wxss */
+.official{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10rpx;
+    margin-bottom: 10rpx;
+}
+.official>image{
+    width: 92%;
+    height: 400rpx;
+}
+.official>text{
+    width: 92%;
+    font-size: 28rpx;
+    color: #d8d8d8;
+    text-indent: 10px;
+}

@@ -1,0 +1,6 @@
+<text class="problem">{{text}}</text>
+<view class="content">
+    <text id="c1">Q:{{question}}</text>
+    <text id="c2">A:{{answer}}</text>
+</view>
+<button class="feedback" bindtap="goToOpinion">我要反馈</button>

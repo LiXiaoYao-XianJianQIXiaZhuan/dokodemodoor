@@ -1,0 +1,143 @@
+/* pages/periphery/user/user.wxss */
+.user{
+    height: 100%;
+    background-color: #e2e2e2;
+}
+/* 用户封面 */
+.user-cover{
+    width: 96%;
+    height: 276rpx;
+    position: relative;
+    left: 2%;
+}
+
+/* 用户信息 */
+.user-info{
+    display: flex;
+    flex-direction: column;
+    width: 96%;
+    margin-bottom: 20rpx;
+    border-bottom: 2px solid #e2e2e2;
+    position: relative;
+    left: 2%;
+    background-color: #ffffff;
+}
+/* 用户头像 */
+.user-info-avatar{
+    position: absolute;
+    width: 150rpx;
+    height: 150rpx;
+    left: 20rpx;
+    top: -90rpx;
+    border-radius: 50%;
+    border: 5px solid white;
+}
+/* 用户栏按钮 */
+.user-info-button{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+.user-info-button-item{
+    width: 20%;
+    border: 2px solid #e2e2e2;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    margin: 20rpx 20rpx 20rpx 20rpx;
+}
+.user-info-button-item image{
+    width: 40rpx;
+    height: 40rpx;
+    margin: 10rpx 0rpx 0rpx 10rpx;
+}
+.user-info-button-item text{
+    font-size: 28rpx;
+    color: rgb(75, 75, 75);
+    font-weight: bold;
+}
+/* 用户昵称 */
+.user-info-nickName{
+    width: 100%;
+    font-size: 40rpx;
+    font-weight: bold;
+    margin: 20rpx 20rpx 20rpx 20rpx;
+}
+.user-info-fans{
+    width: 100%;
+    font-size: 30rpx;
+    color: #d8d8d8;
+    margin: 30rpx 20rpx 30rpx 20rpx;
+}
+
+
+/* 发布内容栏 */
+.user-release{
+    width: 96%;
+    position: relative;
+    left: 2%;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20rpx;
+    border-bottom: 2px solid #e2e2e2;
+    background-color: #ffffff;
+}
+.user-release-title{
+    font-size: 38rpx;
+    border-bottom: 2px solid #F7F7F7;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10rpx;
+    margin-bottom: 10rpx;
+    font-weight: bold;
+}
+.user-release-item{
+    margin-top: 10rpx;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    position: relative;
+}
+.user-release-item-image{
+    margin: 20rpx 20rpx 20rpx 20rpx;
+    width: 230rpx;
+    height: 230rpx;
+}
+.user-release-item-tips{
+    position: absolute;
+    bottom: 40rpx;
+    left: 30rpx;
+    background-color: rgb(0,0,0,0.2);
+    color: white;
+    font-size: 30rpx;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50rpx;
+    border-radius: 10rpx;
+}
+.user-release-item-content{
+    margin: 10rpx 10rpx 10rpx 10rpx;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.user-release-item-content-title{
+    font-size: 36rpx;
+    color: black;
+    letter-spacing: 1px;
+}
+.user-release-item-content-quantitySold{
+    color: #c7c7c7;
+    font-size: 26rpx;
+    font-weight: bold;
+}
+.user-release-item-content-price{
+    font-size: 30rpx;
+    color: #E43C3C;
+    font-weight: bold;
+}
+

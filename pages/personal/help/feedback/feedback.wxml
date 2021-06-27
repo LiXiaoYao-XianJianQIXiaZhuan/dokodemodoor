@@ -1,0 +1,3 @@
+<view class="none" wx:if="{{feedbackList.length===0}}">
+    您暂时还没有向我们反馈问题，说明我们是完美的
+</view>

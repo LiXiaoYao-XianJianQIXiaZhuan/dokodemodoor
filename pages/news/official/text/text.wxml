@@ -1,0 +1,9 @@
+<view class="detail">
+    <view class="title">
+        <text>{{title}}</text>
+    </view>
+    <view class="content">
+        <text>{{content}}</text>
+        <image src="{{newsImage}}" mode="widthFix" />
+    </view>
+</view>

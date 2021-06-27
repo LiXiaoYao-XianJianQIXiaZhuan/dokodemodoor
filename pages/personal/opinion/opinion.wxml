@@ -1,0 +1,21 @@
+<form class="options" bindsubmit="optionSubmit">
+  <view class="options-content">
+    <text class="tips">请描述具体问题</text>
+    <textarea class="message" type="text" maxlength="1000" confirm-type="done" placeholder="异常发生时间、网络状况、具体位置及表现等" placeholder-style="color:#d8d8d8;font-size:30rpx;" name="opinion"/>
+  </view>
+  <view class="options-image" >
+    <text class="tips">图片补充：（相关图能帮助程序员解决问题）</text>
+    <view>
+      <view class="image" wx:for="{{oImage}}" wx:key="item" bindtap="addImage" data-index="{{index}}">
+        <image src="{{item===null? 'http://qszf7nxlq.hn-bkt.clouddn.com/images/options-addImage.png':item}}"/>
+      </view>
+    </view>
+  </view>
+  <view class="options-contact">
+    <text class="tips">联系方式:(选填)</text>
+    <input type="text" confirm-type="done" name="contact"/>
+  </view>
+  <button class="btn" form-type="submit">
+    提交
+  </button>
+</form>

@@ -1,0 +1,9 @@
+page{
+  display:flex;
+  flex-direction: row;
+  color: #ffffff;
+  height: 100%;
+}
+.a{
+  font-size: 64rpx;
+}

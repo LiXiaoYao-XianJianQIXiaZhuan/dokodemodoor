@@ -1,0 +1,364 @@
+/* pages/index/dymamic/dymamic.wxss */
+
+
+/* dynamic页面总体样式 */
+
+.content-dynamic {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 10rpx;
+}
+
+
+/* dynamic页面轮播图样式 */
+
+.content-dynamic-swiper {
+    width: 712rpx;
+    height: 465rpx;
+    margin-top: 10rpx;
+}
+
+
+/* dynamic页面轮播图中图片的样式 */
+
+.content-dynamic-swiper-image {
+    height: 100%;
+    width: 100%;
+    border-radius: 46rpx;
+}
+
+
+/* dynamic页面行程框总体样式 */
+
+.content-dynamic-trip {
+    margin-top: 5px;
+    width: 712rpx;
+    height: 150rpx;
+}
+
+
+/* dynamic页面行程内容总体样式 */
+
+.content-dynamic-trip-content {
+    display: flex;
+    flex-direction: column;
+    width: 712rpx;
+    height: 100%;
+    border-radius: 22rpx;
+    background-color: #ffffff;
+}
+
+
+/* dynamic行程内容框样式 */
+
+.content-dynamic-trip-content-item {
+    margin-bottom: 14px;
+    margin-top: 5px;
+}
+
+
+/* dynamic页面行程框内时间、地点样式 */
+
+.content-dynamic-trip-content-item>view {
+    display: flex;
+    align-items: center;
+    margin-left: 12rpx;
+    color: #505050;
+    font-size: 26rpx;
+}
+
+
+/* dynamic页面行程框内时间、地点图标样式 */
+
+.content-dynamic-trip-content-item image {
+    width: 40rpx;
+    height: 40rpx;
+}
+
+
+/* dynamic页面行程框内行程内容样式 */
+
+.content-dynamic-trip-content-item>view:last-child {
+    color: #000000;
+    font-size: 35rpx;
+    font-weight: bold;
+}
+
+
+/* dynamic页面动态框总体样式 */
+
+.content-dynamic-dynamic {
+    flex: 1;
+    width: 712rpx;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 5px;
+}
+
+
+/* dynamic页面动态框里的内容框的整体样式 */
+
+.content-dynamic-dynamic-item {
+    width: 712rpx;
+    /* display: flex;
+    flex-direction: row; */
+    margin-bottom: 7px;
+    background-color: #ffffff;
+    border-radius: 20rpx;
+}
+
+
+/* dynamic页面动态框的内容框中内容样式 */
+
+.content-dynamic-dynamic-item-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-left: 8rpx;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+/* dynamic页面动态框热门标签样式 */
+.content-dynamic-dynamic-item-content-hotTips{
+    position: absolute;
+    top: 30rpx;
+    right: 50rpx;
+    font-weight: bold;
+    color: rgb(255, 145, 0);
+}
+
+/* dynamic页面谁点赞了的样式 */
+.content-dynamic-dynamic-item-content-starupvote{
+    width: 100%;
+    position: relative;
+    border-bottom: 1px solid rgb(255, 145, 0);
+    color: rgb(255, 145, 0);
+    padding: 10rpx;
+}
+
+
+/* dynamic页面动态头像与(昵称与发布时间)样式 */
+
+.content-dynamic-dynamic-item-content-release {
+    width: 100%;
+    margin-top: 6px;
+    display: flex;
+    flex-direction: row;
+}
+
+
+/* dynamic页面动态框里的头像样式 */
+
+.content-dynamic-dynamic-item-content-release image {
+    width: 100rpx;
+    height: 100rpx;
+    border-radius: 23px;
+}
+
+
+/* dynamic页面动态昵称与发布时间样式 */
+
+.content-dynamic-dynamic-item-content-release-NicknameAndTime {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    margin-left: 5px;
+}
+
+
+/* dynamic页面动态框文本提示样式 */
+
+#d1 {
+    flex: 1;
+    font-size: 32rpx;
+    color: #505050;
+}
+
+
+/* dynamic页面动态框昵称高亮样式 */
+
+#d1 strong {
+    flex: 1;
+    color: #FFC300;
+    font-size: 32rpx;
+}
+
+
+/* dynamic页面动态框内容时间样式 */
+
+#d2 {
+    flex: 1;
+    font-size: 31rpx;
+    color: #8d8d8d
+}
+
+
+/* dynamic页面动态框微博内容样式 */
+
+#d3 {
+    width: 100%;
+    flex: 1;
+    font-size: 32rpx;
+    color: #000000;
+    margin-top: 6px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    margin-bottom: 2px;
+    display: flex;
+    flex-direction: column;
+}
+#d3 text{
+    padding: 0rpx 30rpx;
+}
+
+#d3>.release-Image {
+    width: 96%;
+    padding: 0 14rpx;
+    margin: 40rpx 0;
+}
+
+#d3 video{
+    width: 95%;
+    margin: 28rpx 0;
+    margin-left: 10rpx;
+    border-radius: 16rpx;
+}
+/* 分享页帖子样式 */
+#d3 .starComment{
+    width: 690rpx;
+    margin-left: 10rpx;
+}
+/* 分享框 */
+#d3 .shareMicroblog{
+    display: flex;
+    align-items: center;
+    background-color: rgb(167, 167, 167,0.5);
+    width: 660rpx;
+    margin: 14rpx 20rpx 20rpx 6rpx;
+    padding: 10rpx;
+}
+/* 分享人头像 */
+#d3 .shareMicroblog image{
+    width: 100rpx;
+    height: 100rpx;
+}
+/* 分享人分享内容 */
+#d3 .shareMicroblog-content{
+    display: flex;
+    flex-direction: column;
+    width: 560rpx;
+    margin-left: 10rpx;
+}
+/* 分享人昵称样式 */
+#d3 .shareMicroblog-content view:first-child{
+    font-weight: bold;
+}
+/* 分享人分享内容 */
+#d3 .shareMicroblog-content view:last-child{
+    width: 100%;
+    white-space: nowrap;
+   font-size: 22rpx;
+   word-break: break-all;
+   overflow: hidden;
+   text-overflow: ellipsis;
+}
+
+
+/* dynamic页面发布内容框里图片样式 */
+
+#L-1 image {
+    max-width: 100%;
+}
+
+#L-2,
+#L-4 {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+#L-2 image,
+#L-4 image {
+    width: 49%;
+    height: 324rpx;
+    margin-right: 6rpx;
+}
+
+#L-4 image {
+    width: 49%;
+    height: 324rpx;
+    margin-right: 6rpx;
+    margin-top: 4rpx;
+}
+
+#L-3,
+#L-5,
+#L-6,
+#L-7,
+#L-8,
+#L-9 {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
+#L-3 image,
+#L-5 image,
+#L-6 image,
+#L-7 image,
+#L-8 image,
+#L-9 image {
+    width: 32%;
+    height: 200rpx;
+    margin-right: 8rpx;
+    margin-top: 8rpx;
+}
+
+#d4 {
+    font-size: 24rpx;
+}
+
+.hotContent {
+    display: flex;
+    flex-direction: row;
+    background-color: rgb(241, 241, 241);
+    width: 83%;
+    margin-top: 20rpx;
+    margin-bottom: 20rpx;
+}
+
+.hotContent-hotavatar {
+    width: 210rpx;
+    height: 120rpx;
+}
+
+.hotContent-hotavatar-view {
+    display: flex;
+    flex-direction: column;
+    margin-left: 20rpx;
+    width: 78%;
+    justify-content: center;
+}
+
+.hotContent-hotNickname {
+    width: 100%;
+    color: #FFC300;
+    font-size: 28rpx;
+}
+
+.hotContent-hotContent {
+    width: 100%;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    font-size: 24rpx;
+    color: black;
+}

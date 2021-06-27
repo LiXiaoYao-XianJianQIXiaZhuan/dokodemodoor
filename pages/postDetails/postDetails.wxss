@@ -1,0 +1,230 @@
+/* pages/cicle/post/post.wxss */
+/* 帖子内容样式 */
+.post{
+    height: 93vh;
+  }
+  .post-content{
+    width: 100%;
+    background-color: white;
+    margin-bottom: 20rpx;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .post-user{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    position: relative;
+  }
+  .post-user-avatar{
+    margin: 20rpx 20rpx 20rpx 20rpx;
+    width: 100rpx;
+    height: 100rpx;
+    border-radius: 50%;
+  }
+  .post-user-info{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin-top: 20rpx;
+    margin-bottom: 20rpx;
+  }
+  .post-nickname{
+    font-size: 36rpx;
+    color: black;
+    margin-bottom: 10rpx;
+  }
+  .post-time{
+    font-size: 30rpx;
+    color: #d8d8d8;
+  }
+  .post-focus{
+    position: absolute;
+    right: 10rpx;
+    background-color: #009AFF;
+    border-radius: 50rpx;
+    height: 74rpx;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30rpx;
+    letter-spacing: 2px;
+    width: 134rpx;
+  }
+  .post-text{
+    width: 93%;
+    font-size: 36rpx;
+    color: black;
+    margin: 20rpx 20rpx 20rpx 20rpx;
+  }
+  /* 当有多张图片时 */
+  .post-pImage{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+  .post-pImage image{
+    width: 200rpx;
+    height: 200rpx;
+    margin: 20rpx 20rpx 20rpx 20rpx;
+  }
+  .post-pVideo{
+    margin-top: 20rpx;
+  }
+  .post-button{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20rpx;
+  }
+  .post-share,.post-comment,.post-good{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+  .post-share image,.post-comment image,.post-good image{
+    width: 50rpx;
+    height: 50rpx;
+    margin: 20rpx 20rpx 20rpx 20rpx;
+  }
+  .post-share text,.post-comment text,.post-good text{
+    font-size: 32rpx;
+    color: #999999;
+  }
+  .post-good-clicked text{
+    color: #73CFFF;
+  }
+  .post-tapShareView{
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    z-index:999;
+  }
+  .post-tapShareView #tap1,.post-tapShareView #tap2{
+    width: 100%;
+    font-size: 40rpx;
+    color: black;
+  }
+
+
+/* 评论区样式 */
+.post-commentView{
+    display: flex;
+    flex-direction: column;
+}
+.post-commentView-title{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 42rpx;
+    height: 60rpx;
+    font-weight: bold;
+}
+.post-commentView-item{
+    width: 98%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10rpx 10rpx 10rpx 10rpx;
+}
+.post-commentView-text{
+  width: 93%;
+  font-size: 36rpx;
+  color: black;
+  margin-top: 20rpx;
+  margin-bottom: 20rpx;
+  margin-left: 210rpx;
+}
+  .unshowed{
+    width: 73%;
+    font-size: 36rpx;
+    color: black;
+    margin-top: 20rpx;
+    margin-bottom: 20rpx;
+    margin-left: 60rpx;
+  
+    display: -webkit-box;           /*自适应布局*/ 
+    word-break: break-all;          /*换行模式*/ 
+    text-overflow: ellipsis;        /*超出文字用省略号代替*/ 
+    overflow: hidden;               /*多出部分隐藏*/ 
+    -webkit-box-orient: vertical;   /*竖直方向超出和隐藏*/ 
+    -webkit-line-clamp: 3;          /*设定行数为4*/ 
+  }
+  .post-showAll{
+    font-size: 36rpx;
+    color: #009AFF;
+  }
+  /* 评论区图片样式 */
+  /* 当有多张图片时 */
+  .post-comment-pImage{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-left: 120rpx;
+    width: 85%;
+  }
+  .post-comment-pImage image{
+    width: 160rpx;
+    height: 160rpx;
+    margin: 10rpx 10rpx 10rpx 10rpx;
+  }
+  /* 评论栏样式 */
+  .commentBar{
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    background-color: white;
+  }
+  .commentBar-input{
+    flex: 1;
+    background-color: #F4F4F6;
+    border-radius: 50rpx;
+    padding: 10rpx 10rpx 10rpx 10rpx;
+    display: flex;
+    align-items: center;
+  }
+  .commentBar-input #input{
+    width: 100%;
+    padding: 0 20rpx;
+    border-radius: 50rpx;
+    font-size: 30rpx;
+  }
+  .commentBar-input #emoji{
+    width: 50rpx;
+    height: 50rpx;
+    margin: 10rpx 10rpx 10rpx 10rpx;
+  }
+  .commentBar-input-chooseImage,.commentBar-input-choosevideo{
+    width: 60rpx;
+    height: 60rpx;
+    margin: 10rpx 10rpx 10rpx 10rpx;
+    position: relative;
+  }
+  .tips{
+    width: 24rpx;
+    height: 24rpx;
+    font-size: 20rpx;
+    color: white;
+    background-color: tomato;
+    position: absolute;
+    top: 0rpx;
+    right: 4rpx;
+    border-radius: 50%;
+    text-align: center;
+  }
+  .commentBar-input-sent{
+    font-size: 30rpx;
+  }
+
+

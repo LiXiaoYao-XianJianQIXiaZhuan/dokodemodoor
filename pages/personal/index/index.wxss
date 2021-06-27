@@ -1,0 +1,128 @@
+@import "../../tabBarCommon.wxss";
+page {
+  background-color: white;
+  font-size: 32rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 90%;
+}
+
+.title-unlogin {
+  width: 100%; /* 背景宽度 */
+  background-color: #0093f2; /* 背景颜色 */
+  height: 250rpx; /* 背景长度 */
+  /* 向左居中 */
+  position: relative;
+  line-height: 250rpx;
+  color: white;
+}
+.title {
+  width: 100%; /* 背景宽度 */
+  background-color: #0093f2; /* 背景颜色 */
+  height: 250rpx; /* 背景长度 */
+  display: flex;
+  /* 向左居中 */
+  align-items: center;
+  position: relative;
+}
+
+.title > image:first-child {
+  /* 头像大小 */
+  width: 120rpx;
+  height: 120rpx;
+  border-radius: 50%; /* 圆角大小 */
+  margin: 20rpx 20rpx 20rpx 20rpx;
+}
+
+/* 用户名称 */
+.fl{
+  font-size: 38rpx;
+  color: white;
+  margin-bottom: 12rpx;
+}
+/* 用户个签 */
+.fll{
+  font-size: 30rpx;
+  color: white;
+}
+
+/* 编辑资料 */
+.edit {
+  position: absolute;
+  right: 10rpx;
+  display: flex;
+  align-items: center;
+  color: white;
+}
+.edit > image {
+  width: 30rpx;
+  height: 30rpx;
+}
+.userinfo{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* 粉丝、关注、喜欢 */
+.content {
+  position: absolute;
+  background-color: #fff;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 70%;
+  bottom: -88rpx;
+  height: 140rpx;
+  left: 108rpx ;
+  border-radius: 20rpx;
+  box-shadow: 0 8rpx 6rpx #989797;
+}
+.content>view {
+  flex: 1;
+  text-align: center;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-right: 1px solid rgb(221, 221, 221);
+}
+.content>view:last-child{
+  border: 0;
+}
+.content > view > image {
+  width: 64rpx;
+  height: 50rpx;
+}
+
+/* 个人账户~帮助中心 */
+.menu {
+  padding: 90rpx 0;
+  background-color: #fff;
+  box-sizing: border-box;
+  width: 100%;
+  flex: 1;
+}
+.tab{
+  border-bottom: 1px solid #efefef;
+  height: 100rpx;
+  width: 100%;
+  margin-top: 20rpx;
+  display: flex;
+  align-items: center;
+}
+.logo{
+  margin: 20rpx 20rpx 20rpx 20rpx;
+  width: 50rpx;
+  height: 50rpx;
+}
+.arrow {
+  width: 30rpx;
+  height: 32rpx;
+  position: absolute;
+  right: 20rpx;
+}

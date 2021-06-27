@@ -1,0 +1,62 @@
+<!-- 显示播放列表唱片按钮 -->
+<view class="playLogo">
+    <image src="{{worksData.playLogoUrl}}" class="playLogo-{{worksData.isPlay?'played':'paused'}}" bindtap="play" />
+</view>
+<view class="playListLogo">
+    <image src="http://qszf7nxlq.hn-bkt.clouddn.com/images/works-playlist.png" bindtap="play" bindtap="showPlaylist"/>
+</view>
+<view class="works-playlist" hidden="{{worksData.isPlayList? false:true}}">
+    <view class="works-playlist-title">{{worksData.playListTitle}}</view>
+    <scroll-view class="works-playlist-list" scroll-y="{{true}}" enable-flex="{{true}}">
+        <view class="works-playlist-list-content" wx:for="{{worksData.playList}}" wx:key="item" data-index="{{index}}" bindtap="change">
+            <view class="works-playlist-list-content-id">{{index===worksData.playindex? 'now':index+1}}</view>
+            <view class="works-playlist-list-content-name">
+                <view class="works-playlist-list-content-name-songName">{{item.songName}}</view>
+                <view class="works-playlist-list-content-name-singer">{{item.singer}}</view>
+            </view>
+            <!-- 点一下跳转MV页面 -->
+            <image class="works-playlist-list-content-videoplay" src="http://qszf7nxlq.hn-bkt.clouddn.com/images/works-video.png" bindtap="videoPlay" />
+            <!-- 点一下添加歌曲到播放列表 -->
+            <image class="works-playlist-list-content-addplaylist" src="http://qszf7nxlq.hn-bkt.clouddn.com/images/works-addimage.png"/>
+        </view>
+    </scroll-view>
+</view>
+<!-- 主页面 -->
+<scroll-view class="works" scroll-y="{{true}}" enable-flex="{{true}}">
+    <image class="works-title-images" src="http://qszf7nxlq.hn-bkt.clouddn.com/upload/works-title-image.jpg" mode="aspectFill" />
+    <view class="works-album">
+        <view class="works-album-title">发行专辑</view>
+        <view class="works-album-show">
+            <view class="works-album-content" wx:for="{{worksData.albumdata}}" wx:key="item" bindtap="addAlbumMusic" data-albumindex="{{index}}">
+                <view class="works-album-cover">
+                    <image src="{{item.albumImage}}" />
+                </view>
+                <text class="works-album-name">{{item.albumName}}</text>
+            </view>
+        </view>
+    </view>
+    <view class="works-single">
+        <view class="works-single-title">专辑外单曲推荐</view>
+        <view class="works-single-top">
+            <view class="works-playall" bindtap="addAllMusic">
+                <image src="http://qszf7nxlq.hn-bkt.clouddn.com/images/works-play.png" />
+                <view class="works-playall-title">播放全部(共{{worksData.singleListData.length}}首)</view>
+            </view>
+            <!-- 这个按钮会打开一个新的页面显示更多的音乐，暂时不实现 -->
+            <view class="works-showmore" bindtap="showMoreMusic">查看更多歌曲</view>
+        </view>
+        <scroll-view class="works-single-list" scroll-y="{{true}}">
+            <view class="works-single-list-content" wx:for="{{worksData.singleListData}}" wx:key="item" >
+                <view class="works-single-list-content-id" bindtap="singeChange" data-song="{{item}}" data-index="{{index}}">{{worksData.nowsingleindex==index? 'now':index+1}}</view>
+                <view class="works-single-list-content-name" bindtap="singeChange" data-song="{{item}}" data-index="{{index}}">
+                    <view class="works-single-list-content-name-songName">{{item.songName}}</view>
+                    <view class="works-single-list-content-name-singer">{{item.singer}}-{{item.albumName}}</view>
+                </view>
+                <!-- 点一下跳转MV页面 -->
+                <image class="works-single-list-content-videoplay" src="http://qszf7nxlq.hn-bkt.clouddn.com/images/works-video.png" bindtap="videoPlay" data-index="{{index}}" data-song="{{item}}" />
+                <!-- 点一下添加歌曲到播放列表 -->
+                <image class="works-single-list-content-addplaylist" src="http://qszf7nxlq.hn-bkt.clouddn.com/images/works-addimage.png" bindtap="addPlaylist"  bindtap="addPlaylist" data-index="{{index}}" />
+            </view>
+        </scroll-view>
+    </view>
+</scroll-view>

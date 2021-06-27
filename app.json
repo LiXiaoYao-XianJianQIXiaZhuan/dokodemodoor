@@ -1,0 +1,91 @@
+{
+	"pages": [
+		"pages/index/index/index",
+		"pages/index/dymamic/dymamic",
+		"pages/index/dymamic/trip/trip",
+		"pages/index/dymamic/text/text",
+
+		"pages/index/works/works",
+		"pages/index/works/video/video",
+
+		"pages/index/information/information",
+		"pages/index/information/detail/detail",
+
+		"pages/cicle/index/index",
+		"pages/cicle/report/report",
+
+		"pages/periphery/index/index",
+		"pages/periphery/commodity/commodity",
+
+		"pages/news/official/official",
+		"pages/news/index/index",
+		"pages/news/official/text/text",
+		"pages/news/encourage/encourage",
+		"pages/news/ait/ait",
+		"pages/news/letter/letter",
+		"pages/news/comment/comment",
+		
+		"pages/personal/index/index",
+		"pages/personal/help/help",
+		"pages/personal/user/user",
+		"pages/personal/help/problem/problem",
+		"pages/personal/help/see/see",
+		"pages/personal/help/feedback/feedback",
+		"pages/personal/information/information",
+		"pages/personal/account/account",
+		"pages/personal/collect/collect",
+		"pages/personal/opinion/opinion",
+		"pages/personal/modify/modify",
+		"pages/personal/fans/fans",
+		"pages/personal/focus/focus",
+		"pages/personal/love/love",
+		"pages/postDetails/postDetails"
+	],
+	"window": {
+		"backgroundTextStyle": "light",
+		"navigationBarBackgroundColor": "#0093f2",
+		"navigationBarTextStyle": "white",
+		"enablePullDownRefresh": false,
+		"navigationBarTitleText": "任意门"
+	},
+	"tabBar": {
+		"custom":true,
+		"color": "#ccc",
+		"selectedColor": "#6495ED",
+		"borderStyle": "black",
+		"backgroundColor": "#fff",
+		"list": [
+			{
+				"pagePath": "pages/cicle/index/index",
+				"iconPath": "images/tabbar-cicle-unchecked-icon.png",
+				"selectedIconPath": "images/tabbar-cicle-checked-icon.png",
+				"text": "圈子"
+			},
+			{
+				"pagePath": "pages/periphery/index/index",
+				"iconPath": "images/tabbar-periphery-unchecked-icon.png",
+				"selectedIconPath": "images/tabbar-periphery-checked-icon.png",
+				"text": "周边"
+			},
+			{
+				"pagePath": "pages/index/index/index",
+				"iconPath": "images/tabbar-index-default-icon.jpg",
+				"selectedIconPath": "images/tabbar-index-default-icon.jpg"
+			},
+			{
+				"pagePath": "pages/news/index/index",
+				"iconPath": "images/tabbar-news-unchecked-icon.png",
+				"selectedIconPath": "images/tabbar-news-checked-icon.png",
+				"text": "消息"
+			},
+			{
+				"pagePath": "pages/personal/index/index",
+				"iconPath": "images/tabbar-personal-unchecked-icon.png",
+				"selectedIconPath": "images/tabbar-personal-checked-icon.png",
+				"text": "个人"
+			}
+		]
+	},
+	"sitemapLocation": "sitemap.json",
+	"usingComponents": {}
+}

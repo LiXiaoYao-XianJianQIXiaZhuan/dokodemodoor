@@ -1,0 +1,129 @@
+/* pages/news/index/index.wxss */
+@import "../../tabBarCommon.wxss";
+@import"../../news/official/official.wxss";
+@import"../../news/comment/comment.wxss";
+@import"../../news/encourage/encourage.wxss";
+@import"../../news/ait/ait.wxss";
+
+page{
+    display:flex;
+    flex-direction: row;
+    color: #ffffff;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+/* 按钮栏总体样式 */
+.news-list{
+    width: 180rpx;
+    height: 750rpx;
+    background:rgb(255,255,255,0.5);
+    border-radius: 28rpx;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    top: 15%;
+}
+/* 按钮栏按钮样式 */
+.news-list-button{
+    width: 100rpx;
+    height: 100rpx;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/* 按钮选中时的样式 */
+.news-list-button.selected{
+    border: 3px solid #ffffff;
+}
+/* 按钮图标样式 */
+.news-list-button-image{
+    width: 60rpx;
+    height: 60rpx;
+}
+/* 通知栏整体样式 */
+.news-informationBar{
+    width: 528rpx;
+    height: 1000rpx;
+    border-radius: 32rpx;
+    background:rgb(255,255,255,0.88);
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    right: 24rpx;
+    top: 50rpx;
+    overflow: hidden;
+}
+
+/* 通知栏顶部title */
+.news-informationBar-title{
+    width: 100%;
+    height: 76rpx;
+    line-height: 76rpx;
+    font-size: 36rpx;
+    display: flex;
+    justify-content: center;
+    color: #fff;
+    font-weight: bold;
+    border-bottom: 2px solid #0196F2;
+    background-color: rgb(0, 160, 223);
+    box-shadow: 0 0 6rpx 0 #000000;
+}
+/* 通知内容栏 */
+.news-informationBar-messageList{
+    width: 100%;
+    height: 90%;
+}
+/* 消息框 */
+.news-informationBar-messageList-message{
+    width: 96%;
+    border-radius: 30rpx;
+    background-color: #ffffff;
+    margin:24rpx 10rpx 0;
+    padding-top: 10rpx;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+/* 消息框title */
+.news-informationBar-messageList-message-type{
+    color: #000000;
+    font-size: 32rpx;
+    margin-left: 5rpx;
+    width: 90%;
+    font-weight: bold;
+    
+}
+/* 消息框正文 */
+.news-informationBar-messageList-message-content{
+    flex: 1;
+    color: #505050;
+    width: 80%;
+    font-size: 30rpx;
+    margin-left: 5rpx;
+    overflow: hidden;
+    text-overflow: ellipsis;    
+    white-space: nowrap;
+    text-align: center;
+    line-height: 100rpx;
+}
+.news-informationBar-messageList-message-state{
+    width: 100%;
+    color: #0092FF;
+    font-size: 30rpx;
+    text-align: left;
+    text-indent: 40rpx;
+    display: flex;
+    align-items: center;
+    margin: 20rpx 20rpx 20rpx 20rpx;
+}
+.news-informationBar-messageList-message-row{
+    position: absolute;
+    right: 30rpx;
+    width: 30rpx;
+    height: 30rpx;
+}
+

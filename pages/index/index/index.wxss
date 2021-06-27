@@ -1,0 +1,47 @@
+/* pages/index/index/index.wxss */
+@import "../../tabBarCommon.wxss";
+@import "../../index/dymamic/dymamic.wxss";
+@import "../../index/works/works.wxss";
+@import "../../index/information/information.wxss";
+page{
+    display:flex;
+    flex-direction: column;
+    color: #ffffff;
+    height: 90%;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+/* index页面顶部tab样式 */
+.top-tab{
+    display: flex;
+    flex-direction: row;
+    background-color: #0093f2;
+}
+/* index页面顶部tab内容样式 */
+.top-tab-item{
+    flex:1;
+    color: #676666;
+    border-bottom:2rpx solid #0092FF;
+    text-align: center;
+    height: 70rpx;
+    font-size: 32rpx;
+}
+/* index页面顶部tab内容选中样式 */
+.top-tab-item.checked{
+    color: #ffffff;
+    border-bottom: 2px solid #ffffff;
+}
+
+/* index内容样式即dynamic、works、information页面 */
+.content{
+    flex: 1;
+}
+/* index内容样式使用轮播图的方式切换使用的样式 */
+.content>swiper{
+    height: 100%;
+}
+
+
+
+

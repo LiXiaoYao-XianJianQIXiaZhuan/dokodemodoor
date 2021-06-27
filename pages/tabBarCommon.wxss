@@ -1,0 +1,4 @@
+page{
+    background:url("http://qszf7nxlq.hn-bkt.clouddn.com/upload/backgroundImage.jpg") no-repeat;
+    background-size: auto 100%;
+  }

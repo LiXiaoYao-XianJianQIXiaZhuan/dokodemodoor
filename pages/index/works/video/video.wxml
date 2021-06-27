@@ -1,0 +1,14 @@
+<video id="mv" src="{{videoUrl}}" autoplay="{{true}}"/>
+<view class="message">
+    <text class="title">{{videoName}}</text>
+    <view class="user">
+        <image src="http://qszf7nxlq.hn-bkt.clouddn.com/upload/periphery-seller-avatar.jpg" />
+        <text>{{singer}}</text>
+    </view>
+    <text class="tips">{{singer}} - {{songName}}</text>
+</view>
+<view class="buttons">
+    <view class="buttons-item" bindtap="collect">收藏</view>
+    <view class="buttons-item" bindtap="download">下载</view>
+    <view class="buttons-item" bindtap="goods">点赞</view>
+</view>

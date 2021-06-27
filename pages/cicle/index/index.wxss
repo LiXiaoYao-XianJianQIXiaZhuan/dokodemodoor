@@ -1,0 +1,106 @@
+@import "../../tabBarCommon.wxss";
+page{
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  /* color: #ffffff; */
+  height: 90%;
+}
+/* 搜索框样式 */
+
+/* 搜索外框 */
+.search-view{
+  width: 750rpx;
+  height: 70rpx;
+  padding: 20rpx 0;
+  display: flex;
+  justify-content: center;
+  box-shadow: 3rpx 4rpx 10rpx inset white;
+}
+.search{
+  width: 720rpx;
+  height: 50rpx;
+  border: 2px solid #d0d0d0;
+  border-radius: 20rpx;
+  display: flex;
+  justify-content: center;
+}
+/* 搜索栏文字 */
+.searchText{
+  display: flex;
+  height: 100%;
+}
+/* 搜索 */
+.sousuo {
+  color: #ffffff;
+  font-size: 30rpx;
+  line-height: 50rpx;
+}
+/* 搜索图标 */
+.searchcion {
+  z-index: 2;
+  margin: 10rpx 10rpx 10rpx -14rpx;
+}
+
+/* index页面顶部tab样式 */
+.top-tab{
+  display: flex;
+  flex-direction: row;
+  background-color: #0093f2;
+  width: 100%;
+  height: 100rpx;
+  box-shadow: 0 -4rpx 10rpx white;
+  margin-bottom: 20rpx;
+}
+/* index页面顶部tab内容样式 */
+.top-tab-item{
+  flex:1;
+  color: #e2d8d8;
+  border-bottom:2rpx solid #0092FF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 40rpx;
+}
+/* index页面顶部tab内容选中样式 */
+.top-tab-item.checked{
+  color: #ffffff;
+  border-bottom: 2px solid #ffffff;
+  box-shadow: 0 6rpx 10rpx white;
+}
+
+/* index内容样式即dynamic、follow、hot、square、like页面 */
+.content{
+  width: 100%;
+  height: 100%;
+}
+/* index内容样式使用轮播图的方式切换使用的样式 */
+.content>swiper{
+  height: 100%;
+}
+/* 组件样式 */
+.square,.hot,.focus{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* 发表动态图层样式 */
+.publish{
+  /* background:rgb(0,0,0,0.5); */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  right: 37rpx;
+  top:900rpx;
+  border-radius: 32rpx;
+  /* width: 154rpx; */
+  /* height: 121rpx; */
+}
+.publish image{
+  width: 80rpx;
+  height: 80rpx;
+}

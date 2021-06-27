@@ -1,0 +1,38 @@
+<scroll-view class="periphery" scroll-y="{{true}}" enable-flex="{{true}}">
+    <image class="periphery-title-image" src="http://qszf7nxlq.hn-bkt.clouddn.com/upload/periphery-title-image.png" mode="scaleToFill" />
+    <image class="periphery-title-avatar" src="http://qszf7nxlq.hn-bkt.clouddn.com/upload/periphery-title-avatar.jpg" />
+    <view class="periphery-statement">
+        <view class="periphery-statement-title">五月天周边商店</view>
+        <view class="periphery-statement-content">
+            声明：此面板中所出售的周边均为粉丝自制周边，
+        正版周边请前往我们信总裁的STAYREAL店铺和相
+        信音乐等官方天猫店铺进行购买，在此商品仅为粉丝们
+        为热爱所制作的自己喜欢的物品，喜欢可自行购买。
+        </view>
+    </view>
+    <scroll-view class="periphery-store" scroll-y="{{true}}" enable-flex="{{true}}">
+        <view class="periphery-store-item" wx:for="{{sellerInfo}}" wx:key="item">
+            <text class="periphery-store-item-tips">商品</text>
+            <!-- 卖家头像和用户名 -->
+            <view class="periphery-store-item-userinfo" bindtap="goToUser" data-id="{{item.index}}">
+                <image src="{{item.avatar}}" class="periphery-store-item-userinfo-avatar" />
+                <view class="periphery-store-item-userinfo-nickname">{{item.nickname}}</view>
+            </view>
+            <view class="periphery-store-item-commodity" bindtap="goToCommodity" data-id="{{item.id}}">
+                <!-- 商品图片 -->
+                <view class="periphery-store-item-commodityImage">
+                    <image wx:for="{{item.commodityImage}}" wx:key="item" src="{{item}}" mode="widthFix" />
+                    <!-- 已售数量标签 -->
+                    <view class="periphery-store-item-quantitySold">
+                        <text>已售数量</text>
+                        <text>{{item.quantitySold}}</text>
+                    </view>
+                </view>
+                <!-- 商品标题 -->
+                <view class="periphery-store-item-title">{{item.title}}</view>
+                <!-- 商品价格 -->
+                <view class="periphery-store-item-price">￥{{item.price}}</view>
+            </view>
+        </view>
+    </scroll-view>
+</scroll-view>

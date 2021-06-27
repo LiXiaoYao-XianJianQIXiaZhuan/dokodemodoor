@@ -1,0 +1,104 @@
+<scroll-view class="content-dynamic" scroll-y="{{true}}" enable-flex="{{true}}">
+  <swiper class="content-dynamic-swiper" autoplay="{{true}}" circular="{{true}}">
+    <swiper-item>
+      <image class="content-dynamic-swiper-image" src="http://qszf7nxlq.hn-bkt.clouddn.com/upload/dynamic-swiper-image1.jpg" />
+    </swiper-item>
+    <swiper-item>
+      <image class="content-dynamic-swiper-image" src="http://qszf7nxlq.hn-bkt.clouddn.com/upload/dynamic-swiper-image2.jpg" />
+    </swiper-item>
+  </swiper>
+  <!-- 行程 -->
+  <view class="content-dynamic-trip" bindtap="goToTrip">
+    <scroll-view class="content-dynamic-trip-content" scroll-y="{{true}}" enable-flex="{{true}}">
+      <view wx:for="{{trip}}" wx:key="item" id="trip{{item.index}}" class="content-dynamic-trip-content-item">
+        <view>
+          <image src="http://qszf7nxlq.hn-bkt.clouddn.com/images/dynamic-trip-time.png" />
+          <text>{{item.time}}</text>
+        </view>
+        <view>
+          <image src="http://qszf7nxlq.hn-bkt.clouddn.com/images/dynamic-trip-place.png" />
+          <text>{{item.place}}</text>
+        </view>
+        <view class="content-dynamic-trip-item-title">
+          <text>{{item.title}}</text>
+        </view>
+      </view>
+    </scroll-view>
+  </view>
+  <!-- 动态s -->
+  <!-- 正常微博 -->
+  <view class="content-dynamic-dynamic">
+    <view class="content-dynamic-dynamic-item" wx:for="{{dynamic}}" wx:key="item" bindtap="goToText" data-microblogid="{{item.id}}">
+      <view wx:if="{{item.type==='microblog' || item.type==='hot'}}" class="content-dynamic-dynamic-item-content">
+        <view class="content-dynamic-dynamic-item-content-hotTips" wx:if="{{item.type === 'hot'}}"><strong>热门</strong></view>
+        <view class="content-dynamic-dynamic-item-content-release">
+          <image src="{{item.avatar}}" />
+          <view class="content-dynamic-dynamic-item-content-release-NicknameAndTime">
+            <view id="d1">
+              <strong>{{item.nickname}}</strong>发微博了</view>
+            <view id="d2">{{item.time}}</view>
+          </view>
+        </view>
+        <view id="d3">
+          <text>{{item.content}}</text>
+          <view class="release-Image" wx:if="{{item.images[0]!=''}}">
+            <view id="L-{{item.images.length}}" wx:if="{{item.images.length===1}}">
+              <image mode="heightFix" src="{{item.images[0]}}" bindtap="showImage" data-image="{{item.images[0]}}" />
+            </view>
+            <view id="L-{{item.images.length}}" wx:if="{{item.images.length>1}}">
+              <image mode="aspectFill" bindtap="showImage" wx:for="{{item.images}}" wx:key="item" src="{{item}}" data-image="{{item}}" />
+            </view>
+          </view>
+            <video src="{{item.video}}" wx:if="{{item.video !== ''}}" catchtap="noTap"/>
+        </view>
+      </view>
+      <!-- 点赞微博 -->
+      <view wx:elif="{{item.type ==='starUpvote'}}" class="content-dynamic-dynamic-item-content" bindtap="goToText" data-microblogid="{{item.id}}">
+        <view class="content-dynamic-dynamic-item-content-starupvote">{{item.starNickname}}在 {{item.upvoteTime}} 点赞了</view>
+        <view class="content-dynamic-dynamic-item-content-release">
+          <image src="{{item.avatar}}" />
+          <view class="content-dynamic-dynamic-item-content-release-NicknameAndTime">
+            <view id="d1">
+              <strong>{{item.nickname}}</strong>发微博了</view>
+            <view id="d2">{{item.time}}</view>
+          </view>
+        </view>
+        <view id="d3">
+          <text>{{item.content}}</text>
+          <view class="release-Image" wx:if="{{item.images[0]!=''}}">
+            <view id="L-{{item.images.length}}" wx:if="{{item.images.length===1}}">
+              <image mode="heightFix" src="{{item.images[0]}}" bindtap="showImage" data-image="{{item.images[0]}}" />
+            </view>
+            <view id="L-{{item.images.length}}" wx:if="{{item.images.length>1}}">
+              <image mode="aspectFill" bindtap="showImage" wx:for="{{item.images}}" wx:key="item" src="{{item}}" data-image="{{item}}" />
+            </view>
+          </view>
+            <video src="{{item.video}}" wx:if="{{item.video !== ''}}"/>
+        </view>
+      </view>
+      <!-- 分享微博 -->
+      <view wx:elif="{{item.type ==='share'}}" class="content-dynamic-dynamic-item-content" bindtap="goToText" data-microblogid="{{item.id}}">
+        <view class="content-dynamic-dynamic-item-content-release">
+          <image src="{{item.starAvatar}}" />
+          <view class="content-dynamic-dynamic-item-content-release-NicknameAndTime">
+            <view id="d1">
+              <strong>{{item.starNickname}}</strong>转发了{{item.nickname}}微博</view>
+            <view id="d2">{{item.shareTime}}</view>
+          </view>
+        </view>
+        <view id="d3">
+          <view class="starComment">{{item.shareContent}}</view>
+          <view class="shareMicroblog">
+            <view>
+              <image  src="{{item.avatar}}" mode="heightFix"/>
+            </view>
+            <view class="shareMicroblog-content">
+                  <view >{{item.nickname}}</view>
+                  <view >{{item.content}}</view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</scroll-view>

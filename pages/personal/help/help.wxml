@@ -1,0 +1,15 @@
+<image class="top" src="http://qszf7nxlq.hn-bkt.clouddn.com/upload/help-image.jpg" />
+<scroll-view >
+    <view class="help-title">
+        <image src="http://qszf7nxlq.hn-bkt.clouddn.com/images/hot.png" />
+        <text >热门问题</text>
+    </view>
+    <view class="help-problem" wx:for="{{hotProblem}}" wx:key="item" bindtap="seeProblem" data-id="{{item.problem_id}}">
+        <text >{{item.problem_text}}</text>
+        <image src="http://qszf7nxlq.hn-bkt.clouddn.com/images/news-informationBar-messageList-message-row.png" />
+    </view>
+</scroll-view>
+<view class="feedback">
+        <view id="f1" bindtap="seeFeedback">查看反馈</view>
+        <view id="f2" bindtap="writeFeedback">我要反馈</view>
+</view>

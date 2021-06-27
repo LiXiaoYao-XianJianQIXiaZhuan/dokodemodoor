@@ -1,0 +1,58 @@
+/* pages/personal/focus/focus.wxss */
+/* 页面主体样式 */
+page{
+    background-color: #F7F7F7;
+    height: 100%;
+}
+/* 顶部栏 */
+.title{
+    width: 100%;
+    font-size: 36rpx;
+    font-weight: bold;
+    text-align: center;
+    padding: 20rpx;
+    background-color: white;
+    margin-bottom: 20rpx;
+}
+/* 粉丝列表 */
+.focus{
+    background-color: white;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.focus-content{
+    display: flex;
+    align-items: center;
+    position: relative;
+    border-bottom: 1px solid #F7F7F7;
+}
+.focus-avatar{
+    margin: 20rpx 20rpx 20rpx 20rpx;
+    border-radius: 50%;
+    width: 200rpx;
+    height: 200rpx;
+}
+.focus-message{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.focus-nickname{
+    font-size: 44rpx;
+    color: rgb(39, 39, 39);
+}
+.focus-follow{
+    position: absolute;
+    right: 10rpx;
+    width: 120rpx;
+    height: 56rpx;
+    border-radius: 30rpx;
+    border: 2px solid #009AFF;
+    color: #009AFF;
+    font-size: 28rpx;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

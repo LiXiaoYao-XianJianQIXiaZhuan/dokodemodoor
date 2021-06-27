@@ -1,0 +1,39 @@
+<scroll-view class="commodity" scroll-y="{{true}}">
+    <view class="commodity-title">
+        <image class="commodity-title-image" src="{{commodity.titleImage}}"/>
+        <view class="commodity-title-text">
+            {{commodity.title}}
+        </view>
+        <view class="commodity-Price">
+            <text>￥ {{commodity.price}}</text>
+            <text>已售：{{commodity.quantitySold}}</text>
+        </view>
+    </view>
+    <view class="commodity-user">
+        <image class="commodity-user-avatar" src="{{seller.avatar}}"/>
+        <view class="commodity-user-info">
+            <text class="commodity-user-info-nickName">{{seller.nickName}}</text>
+            <view class="commodity-user-info-fansAndfollow">
+                <text class="commodity-user-info-follow">关注：{{seller.follow}}</text>
+                <text class="commodity-user-info-fans">粉丝：{{seller.fans}}</text>
+            </view>
+        </view>
+    </view>
+    <view class="commodity-content">
+        <text class="commodity-content-title">详情</text>
+        {{content}}
+    </view>
+</scroll-view>
+<view class="bottom">
+    <view class="bottom-callAndCollection">
+        <image class="bottom-image" src="http://qszf7nxlq.hn-bkt.clouddn.com/images/commodity-call.png" />
+        <text class="bottom-text">联系卖家</text>
+    </view>
+    <view class="bottom-callAndCollection">
+        <image class="bottom-image" src="http://qszf7nxlq.hn-bkt.clouddn.com/images/commodity-collection.png"/>
+        <text class="bottom-text">收藏</text>
+    </view>
+    <view class="bottom-buy">
+        立即购买
+    </view>
+</view>

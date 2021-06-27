@@ -1,0 +1,39 @@
+/* pages/news/official/text/text.wxss */
+.detail{
+    height: 100%;
+}
+.title,.content{
+    background-color: #fff;
+}
+.title{
+    width: 100%;
+    border-bottom: 2px solid rgb(230, 230, 230);
+    height: 220rpx;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.title text{
+    width: 90%;
+    font-size: 40rpx;
+    color: black;
+    font-weight: bold;
+    margin-top: 20rpx;
+    margin-bottom: 20rpx;
+}
+.content{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20rpx;
+}
+.content text{
+    width: 90%;
+    font-size: 30rpx;
+    color: black;
+    margin-bottom: 20rpx;
+}
+.content image{
+    width: 90%;
+}

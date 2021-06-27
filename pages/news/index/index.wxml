@@ -1,0 +1,24 @@
+<view class="news-list">
+    <view class="news-list-button {{buttonSelected==='official'? 'selected':''}}" style="background-color:#FF5733" bindtap="clickButton" data-type="official">
+        <image class="news-list-button-image" src="http://qszf7nxlq.hn-bkt.clouddn.com/images/news-official-icon.png" />
+    </view>
+    <view class="news-list-button {{buttonSelected==='comment'? 'selected':''}}" style="background-color:#0092FF" bindtap="clickButton" data-type="comment">
+        <image class="news-list-button-image" src="http://qszf7nxlq.hn-bkt.clouddn.com/images/news-comment-icon.png" />
+    </view>
+    <view class="news-list-button {{buttonSelected==='encourage'? 'selected':''}}" style="background-color:#FF8D1A" bindtap="clickButton" data-type="encourage">
+        <image class="news-list-button-image" src="http://qszf7nxlq.hn-bkt.clouddn.com/images/news-encourage-icon.png" />
+    </view>
+    <view class="news-list-button {{buttonSelected==='ait'? 'selected':''}}" style="background-color:#0092FF" bindtap="clickButton" data-type="ait">
+        <image class="news-list-button-image" src="http://qszf7nxlq.hn-bkt.clouddn.com/images/news-ait-icon.png" />
+    </view>
+    <view class="news-list-button {{buttonSelected==='letter'? 'selected':''}}" style="background-color:#FFEB3B" bindtap="clickButton" data-type="letter">
+        <image class="news-list-button-image" src="http://qszf7nxlq.hn-bkt.clouddn.com/images/news-letter-icon.png" />
+    </view>
+</view>
+<view class="news-informationBar" hidden="{{buttonSelected===''? true:false}}">
+    <include wx:if="{{buttonSelected==='official'}}" src="../../news/official/official.wxml"></include>
+    <include wx:elif="{{buttonSelected==='comment'}}" src="../../news/comment/comment.wxml"></include>
+    <include wx:elif="{{buttonSelected==='encourage'}}" src="../../news/encourage/encourage.wxml"></include>
+    <include wx:elif="{{buttonSelected==='ait'}}" src="../../news/ait/ait.wxml"></include>
+    <include wx:elif="{{buttonSelected==='letter'}}" src="../../news/letter/letter.wxml"></include>
+</view>

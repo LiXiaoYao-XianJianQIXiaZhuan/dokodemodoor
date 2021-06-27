@@ -1,0 +1,153 @@
+/* pages/periphery/index/index.wxss */
+@import "../../tabBarCommon.wxss";
+page{
+    display:flex;
+    flex-direction: column;
+    color: #ffffff;
+    height: 90%;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+/* 顶部大图片 */
+.periphery-title-image{
+    width: 100%;
+    height: 400rpx;
+}
+/* 周边商店文本旁的小logo */
+.periphery-title-avatar{
+    width: 132rpx;
+    height: 132rpx;
+    border-radius: 66rpx;
+    position: absolute;
+    left: 0;
+    top:  339rpx;
+}
+/* 声明框总体样式 */
+.periphery-statement{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #0093f2;
+}
+/* 五月天周边商店几个字的样式 */
+.periphery-statement-title{
+    height: 66rpx;
+    text-align: center;
+    color: #ffe600;
+    font-size: 44rpx;
+    font-weight: bold;
+}
+/* 声明内容样式 */
+.periphery-statement-content{
+    margin-left: 5px;
+    color: #ffffff;
+    font-size: 32rpx;
+    line-height: 160%;
+}
+/* 商品页面样式 */
+.periphery-store{
+    width: 750rpx;
+    height: 100%;
+    background-color: #ebebeb;
+    display: flex;
+    flex-direction: column;
+    
+}
+/* 每一商品页面样式 */
+.periphery-store-item{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-bottom: 26rpx;
+    background-color: white;
+}
+/* 链接为商品提示 */
+.periphery-store-item-tips{
+    position: absolute;
+    right: 55rpx;
+    top: 55rpx;
+    font-size: 31rpx;
+    color: #c2c2c2;
+}
+/* 卖家头像和昵称 */
+.periphery-store-item-userinfo{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    margin-top: 18rpx;
+    
+}
+/* 卖家头像样式 */
+.periphery-store-item-userinfo-avatar{
+    width: 120rpx;
+    height: 120rpx;
+    border-radius: 50%;
+    margin-left: 10rpx;
+}
+/* 卖家昵称 */
+.periphery-store-item-userinfo-nickname{
+    font-size: 34rpx;
+    color: #000000;
+    margin-left: 30rpx;
+}
+.periphery-store-item-commodity{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+.periphery-store-item-commodityImage{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    position: relative;
+}
+/* 商品图片 */
+.periphery-store-item-commodityImage image{
+    flex: 1;
+    /* width: 264rpx;
+    height: 306rpx; */
+    margin: 30rpx 10rpx 10rpx 10rpx;
+}
+/* 已售数量图层样式 */
+.periphery-store-item-quantitySold{
+    background:rgb(0,0,0,0.5);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    right: 37rpx;
+    top:-28rpx;
+    border-radius: 32rpx;
+    width: 154rpx;
+    height: 121rpx;
+}
+/* 已售数量图层文字已售数量的样式 */
+.periphery-store-item-quantitySold>text:first-child{
+    flex: 1;
+    font-size: 34rpx;
+    color: #ffffff;
+}
+/* 已售数量图层文字已售数量的样式 */
+.periphery-store-item-quantitySold>text:last-child{
+    flex: 1;
+    font-size: 34rpx;
+    color: #23F608;
+}
+.periphery-store-item-title{
+    width: 100%;
+    font-size: 38rpx;
+    font-weight: bold;
+    color: black;
+    margin: 10rpx 10rpx 10rpx 10rpx;
+    text-indent: 10rpx;
+}
+.periphery-store-item-price{
+    font-size: 36rpx;
+    color: rgb(228, 60, 60);
+    text-indent: 10rpx;
+    font-weight: bold;
+}
+

@@ -1,0 +1,11 @@
+<view class="news-informationBar-title">收到私信</view>
+<scroll-view class="news-informationBar-messageList" scroll-y="true" enable-flex="{{true}}">
+    <view class="news-informationBar-messageList-message" wx:if="{{buttonSelected==='letter'}}" wx:for="{{Message.letter}}" wx:key="item">
+        <view class="news-informationBar-messageList-message-type">{{item.type}}</view>
+        <view class="news-informationBar-messageList-message-content">{{item.user}}给你发送了一条私信</view>
+        <view class="news-informationBar-messageList-message-state">
+            查看说明
+            <image class="news-informationBar-messageList-message-row" src="http://qszf7nxlq.hn-bkt.clouddn.com/images/news-informationBar-messageList-message-row.png" />
+        </view>
+    </view>
+</scroll-view>

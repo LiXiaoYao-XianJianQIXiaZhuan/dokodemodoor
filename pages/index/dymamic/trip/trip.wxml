@@ -1,0 +1,33 @@
+<view class="trip-today">
+    <view class="trip-today-title">
+        <text class="trip-today-title-text">{{todayTrip.title!=''? todayTrip.title:'今天没有行程'}}</text>
+        <view class="trip-today-title-tips">今天</view>
+    </view>
+    <view class="trip-today-title-timeplace">
+        <view class="trip-today-title-timeplace-item">
+            <image src="http://qszf7nxlq.hn-bkt.clouddn.com/images/dynamic-trip-time.png" />
+            <text>{{todayTrip.time!=''? todayTrip.time:today}}</text>
+        </view>
+        <view class="trip-today-title-timeplace-item">
+            <image src="http://qszf7nxlq.hn-bkt.clouddn.com/images/dynamic-trip-place.png" />
+            <text>{{todayTrip.place!=''? todayTrip.place:'今天没有行程地点'}}</text>
+        </view>
+    </view>
+</view>
+<view class="trip-all">
+    <scroll-view class="trip-list" scroll-y="{{true}}" enable-flex="{{true}}">
+        <view class="trip-list-content" wx:for="{{trip}}" wx:key="item">
+            <view class="trip-list-content-item">
+                <image src="http://qszf7nxlq.hn-bkt.clouddn.com/images/dynamic-trip-time.png" />
+                <text>{{item.time}}</text>
+            </view>
+            <view class="trip-list-content-item">
+                <image src="http://qszf7nxlq.hn-bkt.clouddn.com/images/dynamic-trip-place.png" />
+                <text>{{item.place}}</text>
+            </view>
+            <view class="trip-list-content-item">
+                <text class="trip-list-content-title">{{item.title}}</text>
+            </view>
+        </view>
+    </scroll-view>
+</view>

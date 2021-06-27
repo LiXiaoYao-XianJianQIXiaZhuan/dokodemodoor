@@ -1,0 +1,53 @@
+var Data = {
+	encourageMessage:[
+		{
+			type:'被点赞了',
+			gAvatar:'http://qszf7nxlq.hn-bkt.clouddn.com/upload/dynamic-dynamic-Axin-avatar.jpg',
+			gUserList:[
+				'阿信','玛莎','石头','冠佑','石头'
+			],
+			postUrl:'',
+			time:'06/04'
+		},
+		{
+			type:'被点赞了',
+			gAvatar:'http://qszf7nxlq.hn-bkt.clouddn.com/upload/dynamic-dynamic-Axin-avatar.jpg',
+			gUserList:[
+				'阿信','玛莎','石头','冠佑','石头'
+			],
+			postUrl:'',
+			time:'06/04'
+		},
+		{
+			type:'被点赞了',
+			gAvatar:'http://qszf7nxlq.hn-bkt.clouddn.com/upload/dynamic-dynamic-Axin-avatar.jpg',
+			gUserList:[
+				'阿信','玛莎','石头','冠佑','石头'
+			],
+			postUrl:'',
+			time:'06/04'
+		},
+		{
+			type:'被点赞了',
+			gAvatar:'http://qszf7nxlq.hn-bkt.clouddn.com/upload/dynamic-dynamic-Axin-avatar.jpg',
+			gUserList:[
+				'阿信','玛莎','石头','冠佑','石头'
+			],
+			postUrl:'',
+			time:'06/04'
+		},
+		{
+			type:'被点赞了',
+			gAvatar:'http://qszf7nxlq.hn-bkt.clouddn.com/upload/dynamic-dynamic-Axin-avatar.jpg',
+			gUserList:[
+				'阿信','玛莎','石头','冠佑','石头'
+			],
+			postUrl:'',
+			time:'06/04'
+		},
+	]
+}
+
+module.exports = {
+	encourageData:Data
+}

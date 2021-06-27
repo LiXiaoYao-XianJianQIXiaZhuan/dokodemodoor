@@ -1,0 +1,65 @@
+{
+  "setting": {},
+  "condition": {
+    "plugin": {
+      "list": []
+    },
+    "game": {
+      "list": []
+    },
+    "gamePlugin": {
+      "list": []
+    },
+    "miniprogram": {
+      "list": [
+        {
+          "name": "调试周边页面",
+          "pathName": "pages/periphery/index/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "调试消息页面",
+          "pathName": "pages/news/index/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/news/official/text/text",
+          "pathName": "pages/news/official/text/text",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "调试个人页面",
+          "pathName": "pages/personal/index/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/personal/help/help",
+          "pathName": "pages/personal/help/help",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "调试圈子页面",
+          "pathName": "pages/cicle/index/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/personal/collect/collect",
+          "pathName": "pages/personal/collect/collect",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/postDetails/postDetails",
+          "pathName": "pages/postDetails/postDetails",
+          "scene": null
+        }
+      ]
+    }
+  }
+}

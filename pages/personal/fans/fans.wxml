@@ -1,0 +1,12 @@
+<!-- 顶部标签 -->
+<view class="title">全部粉丝</view>
+<!-- 全部粉丝页面 -->
+<view class="fans">
+    <view class="fans-content" wx:for="{{fansList}}" wx:key="item">
+        <image class="fans-avatar" src="{{item.avatar}}" />
+        <view class="fans-message">
+            <text class="fans-nickname">{{item.nickname}}</text>
+        </view>
+        <view class="fans-follow" bindtap="addFollowed" data-userid="{{item.userid}}">{{item.followed===true? '已关注':'+关注'}}</view>
+    </view>
+</view>

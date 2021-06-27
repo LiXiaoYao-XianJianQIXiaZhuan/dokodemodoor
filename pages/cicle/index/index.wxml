@@ -1,0 +1,39 @@
+<!-- 顶部搜索标签 -->
+<view class="search-view" bindtap="sou">
+  <view class="search">
+    <view class="searchText">
+      <icon class="searchcion" size='16' type='search'></icon>
+      <view class="sousuo">搜索</view>
+    </view>
+  </view>
+</view>
+<!-- 中部标签页标题 -->
+<view class="top-tab">
+  <view class="top-tab-item {{topTapIndex===0? 'checked':'unchecked'}}" bindtap="indexChangeContent" data-Item="0">
+    广场
+  </view>
+  <view class="top-tab-item {{topTapIndex===1? 'checked':'unchecked'}}" bindtap="indexChangeContent" data-Item="1">
+    热度
+  </view>
+  <view class="top-tab-item {{topTapIndex===2? 'checked':'unchecked'}}" bindtap="indexChangeContent" data-Item="2">
+    关注
+  </view>
+</view>
+<!-- 标签点击跳转 -->
+<view class="content">
+  <swiper current="{{indexContentIndex}}" bindchange="indexChangeTab">
+    <swiper-item>
+      <postList class="square" postList="{{squareDATA}}"  bind:getComponentData="getComponentData"></postList>
+    </swiper-item>
+    <swiper-item>
+      <postList class="hot" postList="{{hotDATA}}"  bind:getComponentData="getComponentData"></postList>
+    </swiper-item>
+    <swiper-item>
+      <postList class="focus" postList="{{focusDATA}}"  bind:getComponentData="getComponentData"></postList>
+    </swiper-item>
+  </swiper>
+</view>
+<!-- 发表动态 -->
+<view class="publish" bindtap="fabiao">
+  <image src="http://qszf7nxlq.hn-bkt.clouddn.com/upload/fabiao.png" />
+</view>

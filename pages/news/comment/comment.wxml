@@ -1,0 +1,32 @@
+<view class="news-informationBar-title">收到评论</view>
+<scroll-view class="news-informationBar-messageList" scroll-y="true" enable-flex="{{true}}">
+    <view class="news-informationBar-messageList-message" wx:if="{{buttonSelected==='comment'}}" wx:for="{{Message.comment}}" wx:key="item">
+        <view class="news-informationBar-messageList-message-type">{{item.type}}</view>
+        <view class="message">
+            <view class="message-content">
+                <image src="{{item.sAvartar}}" />
+                <view>
+                    <view class="nickname">
+                        <text>@{{item.sNickname}}</text>
+                        评论
+                    </view>
+                    <view class="content">{{item.content}}</view>
+                    <text class="time">{{item.time}}</text>
+                </view>
+            </view>
+            <view class="all" wx:if="{{item.sOtherAvatar.length!=0}}">
+                <view>
+                    <image wx:for="{{item.sOtherAvatar}}" wx:if="{{index<3}}" wx:key="item" src="{{item}}" />
+                </view>
+                <text>还有其他{{item.sOtherAvatar.length}}条评论</text>
+                <image src="http://qszf7nxlq.hn-bkt.clouddn.com/images/news-informationBar-messageList-message-row.png" />
+            </view>
+            <text class="tips" wx:if="{{item.unread==false}}">已读</text>
+        </view>
+        <!-- <view class="news-informationBar-messageList-message-content">{{item.user}}评论了你的某个帖子</view> -->
+        <view class="news-informationBar-messageList-message-state">
+            查看说明
+            <image class="news-informationBar-messageList-message-row" src="http://qszf7nxlq.hn-bkt.clouddn.com/images/news-informationBar-messageList-message-row.png" />
+        </view>
+    </view>
+</scroll-view>

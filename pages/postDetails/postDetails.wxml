@@ -1,0 +1,85 @@
+<scroll-view class="post" scroll-y="{{true}}" 
+    scroll-into-view="{{gotoComment? 'comment':null}}"  
+    bindscrolltolower="dowmrefresh" scroll-with-animation="{{true}}" lower-threshold="1"
+    enable-back-to-top="{{true}}">
+    <view id="content" class="post-content">
+        <!-- 昵称、发布时间、头像 -->
+        <view class="post-user" bindtap="gotoUser" data-userid="{{post.userid}}">
+            <image class="post-user-avatar" src="{{post.avatar}}" />
+            <view class="post-user-info">
+                <text class="post-nickname">{{post.nickname}}</text>
+                <text class="post-time">{{post.time}}</text>
+            </view>
+            <view class="post-focus" catchtap="addfocus" data-userid="{{post.userid}}">+关注</view>
+        </view>
+        <text class="post-text">{{post.text}}</text>
+        <!-- 图片视频 -->
+        <view class="post-pImage" wx:if="{{post.type===0}}">
+            <image wx:for="{{post.image}}" wx:key="item" src="{{item}}" bindtap="lookImage" data-index="{{index}}" data-type="post"/>
+        </view>
+        <video class="post-pVideo" wx:if="{{post.type===1}}" id="postVideo" src="{{post.video}}" />
+        <!-- 底部按钮 -->
+        <view class="post-button">
+            <view class="post-share" bindtap="shareTap">
+                <image src="http://qszf7nxlq.hn-bkt.clouddn.com/images/post-unshared.png" />
+                <text>{{post.shareSum}}</text>
+            </view>
+            <view class="post-comment" bindtap="commentTap">
+                <image src="http://qszf7nxlq.hn-bkt.clouddn.com/images/post-comment.png" />
+                <text>{{post.commentSum}}</text>
+            </view>
+            <view class="post-good{{post.gooded?'-clicked':''}}" bindtap="goodTap">
+                <image wx:if="{{post.good.gooded}}" src="http://qszf7nxlq.hn-bkt.clouddn.com/images/post-good.png" />
+                <image wx:else src="http://qszf7nxlq.hn-bkt.clouddn.com/images/post-ungood.png" />
+                <text>{{post.good.goodSum}}</text>
+            </view>
+        </view>
+    </view>
+    <view class="post-commentView" id="comment">
+        <view class="post-commentView-title">评论</view>
+        <view class="post-commentView-item" wx:for="{{commentList}}" wx:key="item" wx:for-index="commentindex" data-index="{{commentindex}}" data-commentid="{{item.id}}" bindtap="reply">
+            <view class="post-user" catchtap="gotoUser" data-userid="{{item.userid}}">
+                <image class="post-user-avatar" src="{{item.avatar}}" />
+                <view class="post-user-info">
+                    <text class="post-nickname">{{item.nickname}}</text>
+                    <text class="post-time">{{item.time}}</text>
+                </view>
+            </view>
+            <view class="post-commentView-text {{item.showed==true? '':'unshowed'}}" id="s{{commentindex}}" style='-webkit-line-clamp: {{item.lineNum}};' data-index="{{commentindex}}" data-commentid="{{item.id}}" catchtap="reply">
+                <text wx:if="{{item.lastid!=null}}"><text style="color:#009AFF">{{item.nickname}}</text>回复<text style="color:#009AFF">{{commentList[item.lastid].nickname}}</text>：</text><text >{{item.text}}</text>
+            </view>
+            <text class="post-showAll" catchtap="showAll" data-showed="{{item.showed}}" data-index="{{commentindex}}" hidden="{{item.showBtn? false:true}}">[{{item.showed==true? '收起':'展开全文'}}]</text>
+            <!-- 图片视频 -->
+            <view class="post-comment-pImage" wx:if="{{item.type===0}}">
+                <image catchtap="lookImage"  wx:for="{{item.image}}" wx:key="item" src="{{item}}" data-index="{{index}}" data-type="comment" data-commentindex="{{commentindex}}"/>
+            </view>
+            <video class="post-pVideo" wx:if="{{item.type===1}}" id="postVideo" src="{{item.video}}" />
+        </view>
+    </view>
+</scroll-view>
+<!-- 收藏或分享选项栏 -->
+<view class="post-tapShareView" hidden="{{!bottomShareShow}}">
+    <button id="tap1" bindtap="collect" type="default">收藏</button>
+    <button id="tap2" open-type="share" type="default">分享</button>
+</view>
+<!-- 评论栏 -->
+<view class="commentBar">
+    <!-- 输入框 -->
+    <view class="commentBar-input">
+        <input id="input" type="text" value="{{comment.inputValue}}" placeholder="{{comment.lastid==null? '您可以在发布评论噢':'回复'+reply}}" 
+        focus="{{true}}" adjust-position="{{true}}" confirm-type="完成"
+        bindinput="edit" bindblur="pauseEditing" bindconfirm="finishEditing" />
+        <image id="emoji" src="http://qszf7nxlq.hn-bkt.clouddn.com/images/post-emoji.png" />
+    </view>
+    <!-- 选择图片按钮 -->
+    <image class="commentBar-input-chooseImage" src="http://qszf7nxlq.hn-bkt.clouddn.com/images/post-chooseimage.png" bindtap="chooseImage" >
+        <view class="tips" wx:if="{{comment.image.length>0}}">{{comment.image.length}}</view>
+    </image>
+    <!-- 选择视频按钮 -->
+    <image class="commentBar-input-choosevideo" src="http://qszf7nxlq.hn-bkt.clouddn.com/images/post-choosevideo.png" bindtap="chooseVideo" >
+        <view class="tips" wx:if="{{comment.video!=null}}"></view>
+    </image>
+    <!-- 发送按钮 -->
+    <button class="commentBar-input-sent" plain="{{true}}" wx:if="{{comment.text==''&&comment.image.length==0&&comment.video==null}}" disabled="{{true}}">发送</button>
+    <button class="commentBar-input-sent" wx:if="{{comment.text!=''||comment.image.length>0||comment.video!=null}}" style="color:#73CFFF" bindtap="sent">发送</button>
+</view>

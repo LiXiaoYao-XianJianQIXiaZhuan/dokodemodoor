@@ -1,0 +1,25 @@
+<view class="news-informationBar-title">有人@你</view>
+<scroll-view class="news-informationBar-messageList" scroll-y="true" enable-flex="{{true}}">
+    <view class="news-informationBar-messageList-message" wx:if="{{buttonSelected==='ait'}}" wx:for="{{Message.ait}}" wx:key="item">
+        <view class="news-informationBar-messageList-message-type">{{item.type}}</view>
+        <view class="ait">
+            <view class="ait-content">
+                <image src="{{item.aAvartar}}" />
+                <view>
+                    <view class="ait-nickname">
+                        <text>@{{item.aNickname}}</text>
+                        @了你
+                    </view>
+                    <view class="ait-text">{{item.content}}</view>
+                    <text class="ait-time">{{item.time}}</text>
+                </view>
+            </view>
+            <text class="tips" wx:if="{{item.unread==false}}">已读</text>
+        </view>
+        <!-- <view class="news-informationBar-messageList-message-content">{{item.user}}提到了你</view> -->
+        <view class="news-informationBar-messageList-message-state">
+            查看说明
+            <image class="news-informationBar-messageList-message-row" src="http://qszf7nxlq.hn-bkt.clouddn.com/images/news-informationBar-messageList-message-row.png" />
+        </view>
+    </view>
+</scroll-view>

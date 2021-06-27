@@ -1,0 +1,12 @@
+<scroll-view class="detail" scroll-y="{{true}}">
+    <view class="detail-top">
+        <text class="detail-top-title">{{title}}</text>
+        <text class="detail-top-time">{{time}}</text> 
+    </view>
+    <view class="detail-content">
+        <text >{{content}}</text>
+        <image wx:if="{{images[0]!=''}}" wx:for="{{images}}" wx:key="item" src="{{item}}" mode="aspectFit" bindtap="lookImage" data-imgIndex="{{index}}"/>
+        <video wx:if="{{videoUrl!=''}}" src="{{videoUrl}}"></video>
+    </view>
+      
+</scroll-view>

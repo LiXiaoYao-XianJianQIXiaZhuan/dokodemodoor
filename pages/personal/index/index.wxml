@@ -1,0 +1,53 @@
+<!-- 顶部个人信息标签 -->
+<view wx:if="{{!loginStatus}}" class="title-unlogin" bindtap="userLogin">
+    点击此处登录，解锁更多功能噢！相信我！
+</view>
+<view class="title" wx:if="{{loginStatus === true}}">
+  <image src="{{userInfo.imgUrl}}" mode="aspectFill"></image>
+  <view class="userinfo">
+    <view class="fl">{{userInfo.username}}</view>
+    <view class="fll">{{userInfo.sign}}</view>
+  </view>
+  <view class="edit" bindtap="information">
+    <text>编辑资料</text>
+    <image src="http://qszf7nxlq.hn-bkt.clouddn.com/images/arrow.png"></image>
+  </view>
+  <!-- 中部标签 -->
+  <view class="content">
+    <view bindtap="goToFans">
+      <view>{{fans}}</view>
+      <view>粉丝</view>
+    </view>
+    <view bindtap="goToFocus">
+      <view>{{focus}}</view>
+      <view>关注</view>
+    </view>
+    <view bindtap="goToLove">
+      <view>{{love}}</view>
+      <view>喜欢</view>
+    </view>
+  </view>
+</view>
+<!-- 底部 -->
+<view class="menu">
+  <view class="tab" bindtap="collect">
+    <image class="logo" src="http://qszf7nxlq.hn-bkt.clouddn.com/images/person-collect.png" />
+    <text >我的收藏</text>
+    <image class="arrow" src="http://qszf7nxlq.hn-bkt.clouddn.com/images/arrow.png"></image>
+  </view>
+  <view class="tab" bindtap="order">
+    <image class="logo" src="http://qszf7nxlq.hn-bkt.clouddn.com/images/person-order.png" />
+    <text >订单管理</text>
+    <image class="arrow" src="http://qszf7nxlq.hn-bkt.clouddn.com/images/arrow.png"></image>
+  </view>
+  <view class="tab" bindtap="opinion">
+    <image class="logo" src="http://qszf7nxlq.hn-bkt.clouddn.com/images/person-opinion.png" />
+    <text >意见反馈</text>
+    <image class="arrow" src="http://qszf7nxlq.hn-bkt.clouddn.com/images/arrow.png"></image>
+  </view>
+  <view class="tab" bindtap="help">
+    <image class="logo" src="http://qszf7nxlq.hn-bkt.clouddn.com/images/person-help.png" />
+    <text >帮助中心</text>
+    <image class="arrow" src="http://qszf7nxlq.hn-bkt.clouddn.com/images/arrow.png"></image>
+  </view>
+</view>
